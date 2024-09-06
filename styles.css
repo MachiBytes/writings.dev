@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Recursive:wght@300..1000&display=swap');
+
+:root {
+    /* Colors */
+    --navy-blue: #232830;
+    --red: #FF7575;
+    --blue: #4699E0;
+    --gray: #909090;
+    --dark-gray: #4D4D4D;
+
+    /* Font Sizes */
+    --title: 70px;
+    --large: 30px;
+    --medium: 27px;
+    --small: 24px;
+    --extra-small: 20px;
+    --tiny: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--navy-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    max-width: 1440px;
+    padding: 50px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > .logo-text {
+    font-size: var(--medium);
+}
+
+nav > #navbar-links {
+    display: flex;
+    gap: 15px;
+    font-size: var(--small);
+}
+
+nav > #navbar-links > a {
+    transition: 0.2s;
+}
+
+nav > #navbar-links > a:hover {
+    color: var(--red);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-bottom: var(--dark-gray) 1px solid;
+    padding: 100px;
+}
+
+header > #title {
+    font-family: 'Recursive';
+    font-style: italic;
+    font-weight: 500;
+    font-size: var(--title);
+    color: var(--red);
+}
+
+header > #subtitle {
+    font-weight: 400;
+    font-size: var(--large);
+}
+
+#filter {
+    display: flex;
+    gap: 25px;
+    padding: 20px 0;
+    margin-bottom: 50px;
+}
+
+#filter > button {
+    background-color: transparent;
+    border: none;
+    color: var(--gray);
+    font-family: 'Recursive';
+    font-weight: 400;
+    font-style: italic;
+    font-size: var(--small);
+    transition: 0.2s;
+    padding: 0;
+}
+
+#filter > button:hover {
+    color: var(--red);
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 25px;
+    margin-bottom: 50px;
+    padding: 0 5%;
+    row-gap: 50px;
+}
+
+main > .card {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    font-family: 'Poppins';
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+main > .card > img {
+    width: 100%;
+}
+
+main > .card > .card-title {
+    font-size: var(--extra-small);
+    font-weight: 800;
+    line-height: var(--small);
+}
+
+main > .card > .card-meta {
+    font-size: var(--tiny);
+}
+
+#pagination {
+    margin-bottom: 50px;
+    display: flex;
+    gap: 30px;
+}
+
+#pagination > a {
+    font-size: var(--small);
+    color: var(--gray);
+    font-family: 'Recursive';
+    font-style: italic;
+    transition: 0.2s;
+}
+
+#pagination > a:hover {
+    color: var(--red);
+}
+
+#pagination > a.active-page {
+    color: var(--red);
+    position: relative;
+    display: inline-block;
+}
+
+#pagination > a.active-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 2px;
+    background-color: var(--red);
+}
+
+footer {
+    width: 100%;
+    border-top: var(--dark-gray) 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--extra-small);
+}
+
+footer > .container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 25px 5% 75px 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > .container > #credits {
+    display: flex;
+    gap: 10px;
+}
+
+footer > .container button {
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--extra-small);
+    cursor: pointer;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+}
